@@ -28,17 +28,25 @@
         }
 
         .text-block {
+            margin: 10px;
+            padding: 10px;
             background-color: #ffcccc;
             border: 2px solid red;
+            display: block
+            
             /* PROBLEM 2: Diese Textblöcke fließen ineinander, weil sie als <span> 
                standardmäßig "inline" sind. Sie brauchen Block-Verhalten und Außenabstand! */
         }
 
         .button {
+            margin: 10px;
+            padding: 10px;
             background-color: #c026d3;
             color: white;
             font-weight: bold;
             text-align: center;
+            display: inline
+            
             /* PROBLEM 3: Diese Buttons sollen nebeneinander stehen, sind als <div> 
                aber standardmäßig "block"-Elemente. Sie brauchen Innen- und Außenabstände! */
         }
@@ -49,13 +57,14 @@
             font-size: 24px;
             font-weight: bold;
             border: 5px dashed red;
+            display: none
             /* PROBLEM 4: Dieses Element soll komplett aus dem Layout verschwinden! */
         }
 
         /* --- DEIN CODE STARTET HIER --- */
 
         /* 1. Füge den universellen Selektor (*) für border-box hinzu */
-
+        * { box-sizing: border-box; }
 
         /* 2. Repariere .text-block (Tipp: display, margin, padding) */
 
